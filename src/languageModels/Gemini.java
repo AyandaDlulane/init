@@ -17,4 +17,8 @@ public class Gemini extends LanguageModel{
                         null);
         return response.text();
     }
+    @Override
+    public String message(String userImput){
+     return chat("System:"+Prompts.messagePrompt()+" User:"+userImput);
+    }
 }
